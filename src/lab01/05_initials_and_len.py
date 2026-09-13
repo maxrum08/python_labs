@@ -1,0 +1,5 @@
+fio = input('ФИО: ').split()
+initials = ''.join(x[0] for x in fio)
+length = sum(len(x) for x in fio)
+print(f"Инициалы: {initials}")
+print(f"Длина (символов): {length+2}")
