@@ -4,4 +4,4 @@
 
 Нереальное описание кода **hello world!**
 
-![](../../images/lab01/ex01.png)
+![](../../images/lab01/img01.png)
