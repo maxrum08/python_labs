@@ -1,4 +1,4 @@
-string = input()
+string = input('in: ')
 for i in range(len(string)):
     if string[i].isupper():
         start=i
@@ -13,4 +13,4 @@ for i in range(start, len(string), step):
     res += string[i]
     if string[i] == '.':
         break
-print(res)
+print('out:', res)

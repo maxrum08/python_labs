@@ -1,4 +1,4 @@
-price, discount, vat = float(input('Цена: ')), float(input('Скидка: ')), float(input('НДС: '))
+price, discount, vat = float(input('price=')), float(input('discount=')), float(input('vat='))
 base = price * (1 - discount/100)
 vat_amount = base * (vat/100)
 total = base + vat_amount
