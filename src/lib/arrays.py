@@ -50,3 +50,4 @@ def flatten(mat: list[list | tuple]) -> list:
 #     for test in ([[1, 2], [3, 4]], [[1, 2], (3, 4, 5)], [[1], [], [2, 3]], [[1, 2], "ab"]):
 #         print(test,'=> ', end ='')
 #         print(flatten(test))
+

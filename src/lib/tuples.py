@@ -5,7 +5,7 @@ def format_record(rec: tuple[str, str, float]) -> str:
     if len(rec) != 3: raise ValueError('Неверное число данных')
     if not isinstance(rec[0], str): raise TypeError('Неверный тип ФИО')
     if not isinstance(rec[1], str): raise TypeError('Неверный тип группы')
-    if isinstance(rec[2], bool) or not isinstance(rec[2], (int, float)): raise TypeError('Неверный тип GPA')
+    if not isinstance(rec[2], (int, float)): raise TypeError('Неверный тип GPA')
     if not rec[0].strip(): raise ValueError('Пустое ФИО')
     if not rec[1].strip(): raise ValueError('Пустая группа')
     if not 0.0 <=rec[2] <= 5.0: raise ValueError("Неверное значение GPA")
@@ -29,6 +29,6 @@ if __name__ == '__main__':
                  ("Петров Пётр", "IKBO-12", 5.0),
                  ("Петров Пётр Петрович", "IKBO-12", 5.0),
                  ("  сидорова  анна   сергеевна ", "ABB-01", 3.999),
-                 ("Уку Леля", "bimbimbambam", True)):
+                 ("Макс", "bimbimbambam", 5.00)):
         print(test, '=> ', end = '')
         print(format_record(test))
