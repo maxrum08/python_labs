@@ -2,7 +2,7 @@
 from src.lib.text import normalize, tokenize, count_freq, top_n
 
 text = input()
-TABLE = 1
+TABLE = 0
 
 normal = normalize(text)
 words = tokenize(normal)
