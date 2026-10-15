@@ -5,3 +5,4 @@
 | **lab01** | [Открыть lab01](/src/lab01/README.md) |
 | **lab02** | [Открыть lab02](/src/lab02/README.md) |
 | **lab03** | [Открыть lab03](/src/lab03/README.md) |
+| **lab04** | [Открыть lab04](/src/lab04/README.md) |
