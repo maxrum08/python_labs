@@ -10,20 +10,26 @@ ENCODING = "utf-8"
 
 def sorted_word_counts(freq: dict[str, int]) -> list[tuple[str, int]]:
     return sorted(freq.items(), key=lambda kv: (-kv[1], kv[0]))
+def main() -> None:
+    try:
+        text = read_text(INPUT, encoding=ENCODING)
+    except FileNotFoundError:
+        print("Файл не найден")
+        return
 
-text = read_text(INPUT, encoding=ENCODING)
-normal = normalize(text)
-words = tokenize(normal)
-freq = count_freq(words)
-top_5 = top_n(freq, 5)
-rows = sorted_word_counts(freq)
+    normal = normalize(text)
+    words = tokenize(normal)
+    freq = count_freq(words)
+    top_5 = top_n(freq, 5)
+    rows = sorted_word_counts(freq)
 
+    write_csv(rows, OUTPUT, header=("word", "count"))
 
-write_csv(rows, OUTPUT, header=("word", "count"))
+    print(f'Всего слов: {len(words)}')
+    print(f'Уникальных слов: {len(set(words))}')
+    print('Топ-5:')
+    for place in top_5:
+        print(f"{place[0]}:{place[1]}")
 
-print(f'Всего слов: {len(words)}')
-print(f'Уникальных слов: {len(set(words))}')
-print('Топ-5:')
-for place in top_5:
-    print(f"{place[0]}:{place[1]}")
-
+if __name__ == "__main__":
+    main()
