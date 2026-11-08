@@ -2,8 +2,9 @@
 
 | Лабораторная | Ссылка |
 | :--- | :--- |
-| **lab01** | [Клик](/src/lab01/README.md) |
-| **lab02** | [Клик](/src/lab02/README.md) |
-| **lab03** | [Клик](/src/lab03/README.md) |
-| **lab04** | [Клик](/src/lab04/README.md) |
-| **lab05** | [Клик](/src/lab05/README.md) |
+| **lab01** | [Клик](/src/lab01/) |
+| **lab02** | [Клик](/src/lab02/) |
+| **lab03** | [Клик](/src/lab03/) |
+| **lab04** | [Клик](/src/lab04/) |
+| **lab05** | [Клик](/src/lab05/) |
+| **lab06** | [Клик](/src/lab06/) |
