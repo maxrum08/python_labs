@@ -17,7 +17,7 @@ def make_student(fio: str, birthdate: str, group: str, gpa:float) -> dict:
         raise ValueError(f"Дата рождения '{birthdate}' не может быть в будущем.")
 
     if isinstance(gpa, bool) or not isinstance(gpa, (int, float)):
-        raise TypeError(f"Неверный формат GPA: {gpa}. Ожидается float или int.")
+        raise ValueError(f"Неверный формат GPA: {gpa}. Ожидается float или int.")
     if not (0.0 <= float(gpa) <= 5.0):
         raise ValueError("GPA должен принадлежать диапазону от 0.0 до 5.0")
      

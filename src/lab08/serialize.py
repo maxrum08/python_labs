@@ -23,7 +23,7 @@ def students_from_json(path: str) -> list[dict]:
         try:
             valid_students.append(student_to_dict(student))
         except ValueError as e:
-            print(f"Ошибка в записи {id}: {e}")
+            raise ValueError(f"Ошибка в записи {id}: {e}")
     return valid_students
 
 if __name__ == "__main__":
