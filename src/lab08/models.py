@@ -6,8 +6,8 @@ STUDENT_FIELDS = ("fio", "birthdate", "group", "gpa")
 def make_student(fio: str, birthdate: str, group: str, gpa:float) -> dict:
     """Создает словарь с данными студента, проверяя корректность данных."""
      
-    if not isinstance(fio, str) or not isinstance(group, str) or not fio.strip() or not group.strip() or not isinstance(birthdate, str):
-        raise ValueError("Поля 'fio' и 'group' должны быть непустыми строками.")
+    if not isinstance(fio, str) or not isinstance(group, str) or not isinstance(birthdate, str) or not fio.strip() or not group.strip() or not birthdate.strip():
+        raise ValueError("Поля 'fio' и 'group' и 'birthdate' должны быть непустыми строками.")
     
     try:
         bd = date.fromisoformat(birthdate)
